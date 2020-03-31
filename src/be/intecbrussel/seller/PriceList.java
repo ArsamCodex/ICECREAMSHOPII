@@ -41,25 +41,20 @@ public class PriceList {
 
     public double getMagnumPrice(MagnumType magnumType) {
 
-        double magnumPrice = magnumStandardPrice;
         switch (magnumType) {
             case ALPINENUTS:
-                magnumPrice *= 1.3;
+                magnumStandardPrice *= 1.5;
                 break;
             case BLACKCHOCOLATE:
-                magnumPrice *= 1;
-                break;
             case MILKCHOCOLATE:
-                magnumPrice *= 1;
+            case ROMANTICSTRAWBERRI:
+                magnumStandardPrice *= 1;
                 break;
             case WHITECHOCOLATE:
-                magnumPrice *= 1;
-                break;
-            case ROMANTICSTRAWBERRI:
-                magnumPrice *= 1.6;
+                magnumStandardPrice= magnumStandardPrice;
                 break;
         }
-        return magnumPrice;
+        return magnumStandardPrice;
     }
     @Override
     public String toString() {

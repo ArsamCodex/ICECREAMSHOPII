@@ -10,16 +10,6 @@ public class IceCreamSalon implements IceCreamSeller {
     PriceList pricelist ;
     double totalProfit ;
 
-  //  public IceCreamSalon(double v){
-  //      this(new PriceList(1,3.0,2.0));
-
-   // public IceCreamSalon(PriceList priceList){
-    //    this.pricelist=priceList;
-   // }
-
-
-
-
 
     @Override
     public double getProfit() {
@@ -29,7 +19,7 @@ public class IceCreamSalon implements IceCreamSeller {
     @Override
     public Cone orderCone(Cone.Flavor[] flavor) {
         Cone hoorntje = new Cone(flavor);
-        totalProfit += pricelist.getBallPrice() * flavor.length;
+       this.totalProfit += pricelist.getBallPrice() * flavor.length;
 
         return hoorntje;
 
@@ -80,11 +70,6 @@ public class IceCreamSalon implements IceCreamSeller {
         return armin;
     }
 
-//    public static class Stock {
-//        private int iceRockets=100;
-//        private int cones =300;
-//        private int balls = 1000;
-//        private int mangi = 50;}
 
 
 

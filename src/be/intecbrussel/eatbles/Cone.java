@@ -13,34 +13,17 @@ public class Cone implements Eatable {
     public void eat() {
 
 
-        System.out.println(" YOUR ARE EATING Cobe whith flavor" );
+        System.out.println(" YOUR ARE EATING Cone whith flavor" );
         for (Flavor ball : balls)
             System.out.println(ball);
 
     }
 
-     // public Cone(Flavor[] balls) {
-
-
-           // Flavor [] balls1 = new Flavor[8];
-//            balls1 [0] = Flavor.CHOCOLATE;
-//            balls1 [1] = Flavor.BANANA;
-//            balls1 [2] = Flavor.LEMON;
-//            balls1 [3] = Flavor.MOKKA;
-//            balls1 [4] = Flavor.PISTACHE;
-//            balls1 [5] = Flavor.STRACIATELLA;
-//            balls1 [6] = Flavor.VANILLA;
-//            balls1 [7] = Flavor.STRAWBERRY;
-
-            ;
-
-//           for( int i = 0 ; i <balls.length; i++ ){
-//              // balls    [i] = Flavor.valueOf(String.valueOf(i)) ;
-//               System.out.println(balls[i]);
 
 
     public Cone(Flavor[] balls) {
-        this.balls = balls;
+
+            this.balls = balls;
     }
 
 
