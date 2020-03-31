@@ -8,14 +8,14 @@ import be.intecbrussel.eatbles.Magnum;
 public class IceCreamSalon implements IceCreamSeller {
 
     PriceList pricelist ;
-    double totalProfit = 0;
+    double totalProfit ;
 
-    public IceCreamSalon(double v){
-        this(new PriceList(1,3.0,2.0));
-    }
-    public IceCreamSalon(PriceList priceList){
-        this.pricelist=priceList;
-    }
+  //  public IceCreamSalon(double v){
+  //      this(new PriceList(1,3.0,2.0));
+
+   // public IceCreamSalon(PriceList priceList){
+    //    this.pricelist=priceList;
+   // }
 
 
 

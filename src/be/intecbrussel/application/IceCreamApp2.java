@@ -15,7 +15,7 @@ public class IceCreamApp2 {
         PriceList prijzenAuto = new PriceList(2,1.5,3);
         Stock stock = new Stock();
 
-        IceCreamSeller testje = new IceCreamSalon(prijzen);
+        IceCreamSeller testje = new IceCreamSalon();
         Cone.Flavor[] test = {Cone.Flavor.BANANA, Cone.Flavor.LEMON, Cone.Flavor.CHOCOLATE};
 
         Eatable[] bestelling3 = {testje.orderIceRocket(),testje.orderCone(test)};
