@@ -35,16 +35,12 @@ public class IceCreamSalon implements IceCreamSeller {
     @Override
     public Magnum orderMagnum(Magnum.MagnumType magnumType) {
         // HIer met deze method gan we totalproFit berekenenn en
-        // new Magnum Object terug geven 
+        // new Magnum Object terug geven
+        totalProfit += magnumType == null ? (pricelist.getMagnumPrice(magnumType)) : (pricelist.getMagnumPrice(magnumType));
+        return new Magnum(magnumType);
 
-
-
-
-    @Override
-    public String toString() {
-        return "IceCreamSalon{" +
-                "pricelist=" + pricelist +
-                ", totalProfit=" + totalProfit +
-                '}';
     }
+
+
+   
 }

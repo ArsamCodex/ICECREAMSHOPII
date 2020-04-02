@@ -54,7 +54,7 @@ public class PriceList {
                 magnumStandardPrice= magnumStandardPrice;
                 break;
         }
-        return magnumStandardPrice;
+        return getMagnumPrice(magnumType);
     }
 
 }
