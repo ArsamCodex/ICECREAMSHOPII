@@ -10,6 +10,9 @@ public class IceCreamSalon implements IceCreamSeller {
     private PriceList pricelist ;
     private double totalProfit ;
 
+    public IceCreamSalon(PriceList pricelist) {
+        this.pricelist = pricelist;
+    }
 
     @Override
     public double getProfit() {
@@ -36,11 +39,14 @@ public class IceCreamSalon implements IceCreamSeller {
     public Magnum orderMagnum(Magnum.MagnumType magnumType) {
         // HIer met deze method gan we totalproFit berekenenn en
         // new Magnum Object terug geven
-        totalProfit += magnumType == null ? (pricelist.getMagnumPrice(magnumType)) : (pricelist.getMagnumPrice(magnumType));
-        return new Magnum(magnumType);
+//        totalProfit += magnumType == null ? (pricelist.getMagnumPrice(magnumType)) : (pricelist.getMagnumPrice(magnumType));
+            totalProfit += pricelist.getMagnumPrice(magnumType);
+
+
+               return new Magnum(magnumType);
 
     }
 
 
-   
+
 }

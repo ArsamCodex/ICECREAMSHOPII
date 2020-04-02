@@ -9,7 +9,7 @@ public class PriceList {
     private double magnumStandardPrice;
 
     public PriceList() {
-        this(0,0,0);
+        this.magnumStandardPrice =1.50;
     }
 
     public PriceList(double ballPrice, double rocketPrice, double magnumStandardPrice) {
@@ -54,7 +54,7 @@ public class PriceList {
                 magnumStandardPrice= magnumStandardPrice;
                 break;
         }
-        return getMagnumPrice(magnumType);
+        return magnumStandardPrice  ;
     }
 
 }

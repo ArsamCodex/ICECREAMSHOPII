@@ -3,11 +3,11 @@ package be.intecbrussel.eatbles;
 import java.util.Arrays;
 
 public class Cone implements Eatable {
-      private  Flavor [] balls;
+      public  Flavor [] balls;
 
 
 
-        public Cone(){}
+//        public Cone(){}
 
 
         public Cone(Flavor[] balls) {

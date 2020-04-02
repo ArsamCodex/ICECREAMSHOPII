@@ -6,7 +6,7 @@ import be.intecbrussel.eatbles.IceRocket;
 import be.intecbrussel.eatbles.Magnum;
 
 public class IceCreamCar implements IceCreamSeller {
-    private PriceList priceList = new PriceList();
+    private PriceList priceList = new PriceList(2,3,5);
     private Stock stock = new Stock(1,2,6,5);
     private double totalProfit = 0;
 
