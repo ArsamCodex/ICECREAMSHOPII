@@ -7,8 +7,8 @@ import be.intecbrussel.eatbles.Magnum;
 
 public class IceCreamSalon implements IceCreamSeller {
 
-    PriceList pricelist ;
-    double totalProfit ;
+    private PriceList pricelist ;
+    private double totalProfit ;
 
 
     @Override
@@ -19,40 +19,25 @@ public class IceCreamSalon implements IceCreamSeller {
     @Override
     public Cone orderCone(Cone.Flavor[] flavor) {
 
-
-
-        totalProfit += (flavor != null && flavor.length > 0) ? (pricelist.getBallPrice() * flavor.length) : pricelist.getBallPrice();
+        totalProfit += (flavor != null && flavor.length > 0) ? (pricelist.getRocketPrice() * flavor.length) : pricelist.getBallPrice();
         return new Cone(flavor);
-
-//        Cone hoorntje = new Cone(flavor);
-//       totalProfit += (pricelist.getBallPrice()) * flavor.length;
-//
-//        return hoorntje;
-//
-
-
+        // Hier deze method return a new CONE ( HOORNTJE)
     }
-
     @Override
-    public IceRocket orderIceRocket() {
+    public IceRocket orderIceRocket(){
         totalProfit += pricelist.getRocketPrice();
         return new IceRocket();
+        // hier return a New IceRocket  Dus a new object
 
-//        IceRocket raketijsje = new IceRocket();
-//        totalProfit = totalProfit + pricelist.getRocketPrice();
-//
-//        return raketijsje;
+
     }
 
     @Override
     public Magnum orderMagnum(Magnum.MagnumType magnumType) {
+        // HIer met deze method gan we totalproFit berekenenn en
+        // new Magnum Object terug geven 
 
-        totalProfit += magnumType == null ? (pricelist.getMagnumPrice(Magnum.MagnumType.WHITECHOCOLATE)) : (pricelist.getMagnumPrice(Magnum.MagnumType.ROMANTICSTRAWBERRI) + pricelist.getMagnumPrice(Magnum.MagnumType.ROMANTICSTRAWBERRI));
-        return new Magnum(magnumType);
-//        Magnum magnum = new Magnum(magnumType);
-//        totalProfit +=pricelist.getMagnumPrice(magnumType);
-//        return nmagnum;
-    }
+
 
 
     @Override
