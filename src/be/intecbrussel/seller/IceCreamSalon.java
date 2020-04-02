@@ -18,59 +18,48 @@ public class IceCreamSalon implements IceCreamSeller {
 
     @Override
     public Cone orderCone(Cone.Flavor[] flavor) {
-        Cone hoorntje = new Cone(flavor);
-       this.totalProfit += pricelist.getBallPrice() * flavor.length;
-
-        return hoorntje;
 
 
 
+        totalProfit += (flavor != null && flavor.length > 0) ? (pricelist.getBallPrice() * flavor.length) : pricelist.getBallPrice();
+        return new Cone(flavor);
 
-
-
-
-
-//        Cone.Flavor [] balls ={Cone.Flavor.STRACIATELLA,
-//                Cone.Flavor.BANANA, Cone.Flavor.CHOCOLATE, Cone.Flavor.LEMON, Cone.Flavor.MOKKA, Cone.Flavor.PISTACHE,
-//                Cone.Flavor.STRAWBERRY, Cone.Flavor.STRAWBERRY, Cone.Flavor.VANILLA};
+//        Cone hoorntje = new Cone(flavor);
+//       totalProfit += (pricelist.getBallPrice()) * flavor.length;
 //
-//        Cone orderCone = orderCone(balls);
-//        if (Cone.Flavor.Cone.Flavor.VANILLA.equals(orderCone)) {
-//            System.out.println("EATING Cone VANILA" + "Price is " + (balls.length + 1.50));
-//        } else if (Cone.Flavor.Cone.Flavor.STRAWBERRY.equals(orderCone)) {
-//            System.out.println("Eating cone Strawberry " + "price is " + (balls.length * 1.50));
-//        } else if ( Cone.Flavor.CHOCOLATE.equals(orderCone)){
-//            System.out.println("EATING CONE CHOCOLATE " + "PRICE IS "+ (balls.length * 1.50));}
-//        else if (Cone.Flavor.BANANA.equals(orderCone)){
-//            System.out.println("EATING CONE BANANA " + "PRICE IS "+ (balls.length * 1.50));}
-//        else if (Cone.Flavor.LEMON.equals(orderCone)){
-//            System.out.println("EATING CONE LEMON " + "PRICE IS "+ (balls.length * 1.50));}
-//            else{
-//            System.out.println("noting");
+//        return hoorntje;
 //
-
 
 
     }
 
     @Override
     public IceRocket orderIceRocket() {
+        totalProfit += pricelist.getRocketPrice();
+        return new IceRocket();
 
-        IceRocket raketijsje = new IceRocket();
-        totalProfit = totalProfit + pricelist.getRocketPrice();
-
-        return raketijsje;
+//        IceRocket raketijsje = new IceRocket();
+//        totalProfit = totalProfit + pricelist.getRocketPrice();
+//
+//        return raketijsje;
     }
 
     @Override
     public Magnum orderMagnum(Magnum.MagnumType magnumType) {
-        Magnum armin = new Magnum(magnumType);
-        totalProfit +=pricelist.getMagnumPrice(magnumType);
 
-        return armin;
+        totalProfit += magnumType == null ? (pricelist.getMagnumPrice(Magnum.MagnumType.WHITECHOCOLATE)) : (pricelist.getMagnumPrice(Magnum.MagnumType.ROMANTICSTRAWBERRI) + pricelist.getMagnumPrice(Magnum.MagnumType.ROMANTICSTRAWBERRI));
+        return new Magnum(magnumType);
+//        Magnum magnum = new Magnum(magnumType);
+//        totalProfit +=pricelist.getMagnumPrice(magnumType);
+//        return nmagnum;
     }
 
 
-
-
+    @Override
+    public String toString() {
+        return "IceCreamSalon{" +
+                "pricelist=" + pricelist +
+                ", totalProfit=" + totalProfit +
+                '}';
+    }
 }

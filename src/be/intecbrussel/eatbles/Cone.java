@@ -9,26 +9,22 @@ public class Cone implements Eatable {
 
         public Cone(){}
 
+
+        public Cone(Flavor[] balls) {
+
+            this.balls = balls;
+        }
+
+
     @Override
     public void eat() {
 
 
-        System.out.println(" YOUR ARE EATING Cone whith flavor" );
-        for (Flavor ball : balls)
-            System.out.println(ball);
+        System.out.println(" YOUR ARE EATING Hoorntje met smaak  " + Arrays.toString(balls) );
+//        for (Flavor ball : balls)
+//            System.out.println(ball);
 
     }
-
-
-
-    public Cone(Flavor[] balls) {
-
-            this.balls = balls;
-    }
-
-
-
-
 
 
     public enum Flavor{
@@ -45,10 +41,5 @@ public class Cone implements Eatable {
 
     }
 
-    @Override
-    public String toString() {
-        return "Cone{" +
-                "balls=" + Arrays.toString(balls) +
-                '}';
-    }
+
 }

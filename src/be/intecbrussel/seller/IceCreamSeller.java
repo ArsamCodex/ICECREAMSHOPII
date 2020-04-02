@@ -11,8 +11,5 @@ public interface IceCreamSeller extends Profitable {
     public IceRocket orderIceRocket();
     public Magnum orderMagnum(MagnumType magnumType);
 
-    @Override
-    default double getProfit() {
-        return 0;
-    }
+
 }

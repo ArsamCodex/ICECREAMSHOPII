@@ -1,6 +1,6 @@
 package be.intecbrussel.seller;
 
-import be.intecbrussel.application.Stock;
+import be.intecbrussel.App.Stock;
 import be.intecbrussel.eatbles.Cone;
 import be.intecbrussel.eatbles.IceRocket;
 import be.intecbrussel.eatbles.Magnum;

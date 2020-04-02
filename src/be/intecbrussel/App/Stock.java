@@ -1,10 +1,10 @@
-package be.intecbrussel.application;
+package be.intecbrussel.App;
 
 public class Stock {
-    private int iceRockets = 100;
-    private int cones = 300;
-    private int balls = 1000;
-    private int magni = 50;
+    private int iceRockets ;
+    private int cones ;
+    private int balls ;
+    private int magni ;
 
     public Stock() {
         super();
