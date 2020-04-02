@@ -1,21 +1,22 @@
 package be.intecbrussel.App;
 
-import be.intecbrussel.eatbles.Cone;
-import be.intecbrussel.eatbles.Eatable;
-import be.intecbrussel.eatbles.IceRocket;
-import be.intecbrussel.eatbles.Magnum;
+import be.intecbrussel.eatbles.*;
 import be.intecbrussel.seller.IceCreamSalon;
 import be.intecbrussel.seller.PriceList;
-
-import java.util.Arrays;
 
 public class Application {
     public static void main(String[] args) {
 
-        PriceList price = new PriceList(2,3,4);
-        IceCreamSalon salon = new IceCreamSalon(price);
+        PriceList price = new PriceList(2.0,3.50,4.20);
+        price.arii();
+        IceCreamSalon salon = new IceCreamSalon(new PriceList(2,5,5));
+        Magnum m = new Magnum();
+        m.eat();
+        Cone c = new Cone();
+        c.eat();
 
-        Eatable [ ] ice;
+
+        Eatable[ ] ice;
         ice = new Eatable[]{
                 new Magnum(Magnum.MagnumType.BLACKCHOCOLATE),
                 new Magnum(Magnum.MagnumType.ALPINENUTS),
@@ -26,7 +27,7 @@ public class Application {
                 Cone.Flavor.STRACIATELLA, Cone.Flavor.LEMON , Cone.Flavor.BANANA, Cone.Flavor.STRAWBERRY}),
                 new IceRocket()};
 
-        System.out.println(Arrays.toString(ice));
+     //   System.out.println(Arrays.toString(ice));
         Eatable [] iceCream = new Eatable[]{
                 new Magnum(Magnum.MagnumType.BLACKCHOCOLATE),
                 new Magnum(Magnum.MagnumType.ALPINENUTS),
@@ -43,6 +44,7 @@ public class Application {
                     orders.eat();
             }
         }
-        System.out.println(" youe order ga ot be " + Arrays.toString(iceCream));
+        //System.out.println(" youe order ga ot be " + Arrays.toString(iceCream));
     }
+
 }

@@ -7,6 +7,8 @@ import be.intecbrussel.eatbles.Magnum.MagnumType;
 
 public interface IceCreamSeller extends Profitable {
         //Icecrea mSeler implement Profitable Inteface
+
+
     public Cone orderCone (Cone.Flavor[] cone);
     public IceRocket orderIceRocket();
     public Magnum orderMagnum(MagnumType magnumType);

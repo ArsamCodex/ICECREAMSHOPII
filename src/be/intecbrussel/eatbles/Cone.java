@@ -1,13 +1,11 @@
 package be.intecbrussel.eatbles;
 
-import java.util.Arrays;
-
 public class Cone implements Eatable {
       public  Flavor [] balls;
 
 
 
-//        public Cone(){}
+        public Cone(){}
 
 
         public Cone(Flavor[] balls) {
@@ -20,7 +18,7 @@ public class Cone implements Eatable {
     public void eat() {
 
 
-        System.out.println(" YOUR ARE EATING Hoorntje met smaak  " + Arrays.toString(balls) );
+        System.out.println(" YOUR ARE EATING Hoorntje met smaak  "+ balls    );
 //        for (Flavor ball : balls)
 //            System.out.println(ball);
 
