@@ -43,12 +43,12 @@ public class PriceList {
 
         switch (magnumType) {
             case ALPINENUTS:
-                magnumStandardPrice *= 1.5;
+                magnumStandardPrice *= 1.50;
                 break;
             case BLACKCHOCOLATE:
             case MILKCHOCOLATE:
             case ROMANTICSTRAWBERRI:
-                magnumStandardPrice *= 1;
+                magnumStandardPrice *= 1.0;
                 break;
             case WHITECHOCOLATE:
                 magnumStandardPrice= magnumStandardPrice;
@@ -56,15 +56,5 @@ public class PriceList {
         }
         return magnumStandardPrice;
     }
-    @Override
-    public String toString() {
-        return
 
-
-                "Prijslijst{" +
-                "ballPrice=" + ballPrice +
-                ", rocketPrice=" + rocketPrice +
-                ", magnumStandardPrice=" + magnumStandardPrice +
-                '}';
-    }
 }
