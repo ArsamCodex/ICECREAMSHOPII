@@ -23,7 +23,7 @@ public class IceCreamSalon implements IceCreamSeller {
     public Cone orderCone(Cone.Flavor[] flavor) {
         System.out.println(" new order");
         totalProfit += pricelist.getBallPrice();
-        return  new Cone();
+        return  new Cone(flavor);
     }
     @Override
     public IceRocket orderIceRocket(){
@@ -56,8 +56,7 @@ public class IceCreamSalon implements IceCreamSeller {
     @Override
     public String toString() {
         return "IceCreamSalon{" +
-                "pricelist=" + pricelist +
-                ", totalProfit=" + totalProfit +
+                "totalProfit=" + totalProfit +
                 '}';
     }
 }

@@ -18,7 +18,7 @@ public class Cone implements Eatable {
     public void eat() {
 
 
-        System.out.println(" YOUR ARE EATING Hoorntje met smaak  "+ balls    );
+        System.out.println(" YOUR ARE EATING Hoorntje met smaak  "+ this.balls.length    );
 //        for (Flavor ball : balls)
 //            System.out.println(ball);
 
